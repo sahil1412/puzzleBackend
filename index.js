@@ -79,7 +79,7 @@ app.post('/compute', async (req, res) => {
 // Start the Express.js server
 const PORT = process.env.PORT || 4000;
 compileCpp().then(()=>{
-    app.listen(PORT, () => {
+    app.listen(PORT, '0.0.0.0',() => {
         console.log(`Server is running on port ${PORT}`);
     });
     
